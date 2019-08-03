@@ -17,7 +17,7 @@ const Contacts = () => {
   if (contacts !== null && contacts.length === 0 && !loading) {
     return (
       <TransitionGroup>
-        <CSSTransition key="0" timeout={500} classNames="item">
+        <CSSTransition timeout={500} classNames="item">
           <h4 className="text-center">Please add a contact</h4>
         </CSSTransition>
       </TransitionGroup>
