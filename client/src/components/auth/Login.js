@@ -13,6 +13,11 @@ const Login = props => {
     if (isAuthenticated) {
       props.history.push("/");
     }
+    if (window.performance) {
+      if (performance.navigation.type == 1) {
+        props.history.push("/");
+      }
+    }
     if (error === "Invalid Credentials") {
       setAlert(error, "danger");
       clearErrors();
