@@ -20,10 +20,6 @@ if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
 
-window.onbeforeunload = function() {
-  window.open("http://contact-keeper-mern.herokuapp.com", "_self");
-};
-
 const App = () => {
   return (
     <AuthState>
