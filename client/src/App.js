@@ -20,6 +20,12 @@ if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
 
+if (window.performance) {
+  if (performance.navigation.type == 1) {
+    window.open("http://contact-keeper-mern.herokuapp.com", "_self");
+  }
+}
+
 const App = () => {
   return (
     <AuthState>
